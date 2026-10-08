@@ -1,4 +1,4 @@
-name: DeepSeek Price Notification
+name: DeepSeek Notification
 
 on:
   push:
@@ -15,7 +15,7 @@ permissions:
 
 env:
   WEBSUB_HUB_URL: https://pubsubhubbub.superfeedr.com/
-  FEED_URL: https://zhangyoufu.github.io/DeepSeek-priceNotification/atom.xml
+  FEED_URL: https://zhangyoufu.github.io/DeepSeek-Notification/atom.xml
 
 defaults:
   run:
@@ -27,38 +27,44 @@ jobs:
     outputs:
       changed: ${{ steps.detect-change.outputs.changed }}
     steps:
+      - name: Setup Google Chrome
+        uses: zhangyoufu/actions/setup-chrome@main
+
       - name: Checkout repository
         uses: actions/checkout@v7
         with:
           fetch-depth: 10
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Run fetch script
         id: fetch
         env:
           DEEPSEEK_PLATFORM_URL: ${{ secrets.DEEPSEEK_PLATFORM_URL }}
-        run: node fetch.js | tee output.txt
+        run: ./fetch.ts | tee output.json
 
-      - name: Detect if output.txt changed
+      - name: Detect if output.json changed
         id: detect-change
         run: |-
-          if git diff --quiet HEAD -- output.txt 2>/dev/null; then
+          if [ -z "$(git status --porcelain output.json)" ]; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and push output.txt
+      - name: Commit and push output.json
         if: steps.detect-change.outputs.changed == 'true'
         run: |-
           git config user.name 'github-actions[bot]'
           git config user.email '${{ github.actor_id }}+github-actions[bot]@users.noreply.github.com'
-          git add output.txt
-          git commit -m "update output.txt" -m "${{ steps.fetch.outputs.jsUrl }}"
+          git add output.json
+          git commit -m "update output.json" -m "${{ steps.fetch.outputs.jsUrl }}"
           git push -o ci.skip origin HEAD
 
       - name: Generate Atom feed
         if: steps.detect-change.outputs.changed == 'true'
-        run: mkdir gh-pages; node generate-feed.js >gh-pages/atom.xml
+        run: mkdir gh-pages; ./generate-feed.ts >gh-pages/atom.xml
 
       - name: Setup Pages
         if: steps.detect-change.outputs.changed == 'true'

@@ -1,0 +1,8 @@
+{
+  "name": "deepseek-notification",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "chrome-debugging-client": "^2.1.0"
+  }
+}
