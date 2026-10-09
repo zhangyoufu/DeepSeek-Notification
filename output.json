@@ -1,0 +1,10 @@
+{
+  "homeNotification1": {
+    "en_US": "DeepSeek API Peak/Off-Peak Hours Notice: Weekends with adjusted working days and Chinese public holidays are all billed at off-peak rates.",
+    "zh_CN": "DeepSeek API 峰谷时间说明：调休上班的周末、中国法定节假日全天均按空闲时段计费 。"
+  },
+  "priceNotification": {
+    "en_US": "DeepSeek API Peak/Off-Peak Hours Notice: Weekends with adjusted working days and Chinese public holidays are all billed at off-peak rates.",
+    "zh_CN": "DeepSeek API 峰谷时间说明：调休上班的周末、中国法定节假日全天均按空闲时段计费 。"
+  }
+}
