@@ -1,10 +1,10 @@
 {
   "homeNotification1": {
-    "en_US": "DeepSeek V4.1 Flash has been updated to version V4.1-Flash-1017, with significantly enhanced project development capabilities. Additionally, the API now supports web search and fetch. [Click for details](https://api-docs.deepseek.com/api/search).",
-    "zh_CN": "DeepSeek V4.1 Flash 现已更新至 V4.1-Flash-1017 版本，项目开发能力提升显著；新增 API 支持网页搜索与抓取，欢迎测试和反馈。[点击查看详情](https://api-docs.deepseek.com/zh-cn/guides/search/)"
+    "en_US": "DeepSeek API now supports web search and fetch, charged per successful request. For server-side tool calls hit the search/fetch API, per-request billing will start at 00:00 Beijing Time on November 1, 2026. [Click for details](https://api-docs.deepseek.com/quick_start/pricing/#%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%8A%93%E5%8F%96%E4%BB%B7%E6%A0%BC).",
+    "zh_CN": "DeepSeek API 现已支持网页搜索与抓取，按请求次数计费。服务端工具调用访问到 search/fetch 接口，将于北京时间 2026 年 11 月 1 日 00:00 开始按次收取调用费用。[点击查看详情](https://api-docs.deepseek.com/zh-cn/quick_start/pricing#%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%8A%93%E5%8F%96%E4%BB%B7%E6%A0%BC)"
   },
   "priceNotification": {
-    "en_US": "DeepSeek V4.1 Flash has been updated to version V4.1-Flash-1017, with significantly enhanced project development capabilities. Additionally, the API now supports web search and fetch. [Click for details](https://api-docs.deepseek.com/quick_start/pricing/#%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%8A%93%E5%8F%96%E4%BB%B7%E6%A0%BC).",
-    "zh_CN": "DeepSeek V4.1 Flash 现已更新至 V4.1-Flash-1017 版本，项目开发能力提升显著；新增 API 支持网页搜索与抓取，欢迎测试和反馈。[点击查看详情](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/#%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%8A%93%E5%8F%96%E4%BB%B7%E6%A0%BC)"
+    "en_US": "DeepSeek API now supports web search and fetch, charged per successful request. For server-side tool calls hit the search/fetch API, per-request billing will start at 00:00 Beijing Time on November 1, 2026. [Click for details](https://api-docs.deepseek.com/quick_start/pricing/#%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%8A%93%E5%8F%96%E4%BB%B7%E6%A0%BC).",
+    "zh_CN": "DeepSeek API 现已支持网页搜索与抓取，按请求次数计费。服务端工具调用访问到 search/fetch 接口，将于北京时间 2026 年 11 月 1 日 00:00 开始按次收取调用费用。[点击查看详情](https://api-docs.deepseek.com/zh-cn/quick_start/pricing#%E7%BD%91%E9%A1%B5%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%8A%93%E5%8F%96%E4%BB%B7%E6%A0%BC)"
   }
 }
